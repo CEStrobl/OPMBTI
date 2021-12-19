@@ -1,0 +1,385 @@
+html, body{
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    height:100%;
+    transition-duration: 0.8s;
+}
+
+a{
+    color:unset;
+    text-decoration: none;
+}
+
+
+.topnav .title {
+    float: left;
+    padding: 15px;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.topnav {
+    
+    position:sticky;
+    top: 0;
+    padding: 20px;
+    margin:0%;
+    
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+
+    color: rgb(255, 255, 255);
+    background-image: radial-gradient(circle at top right, rgb(36, 9, 119) 0%, rgb(36, 9, 119) 48%,rgb(72, 7, 149) 48%, rgb(72, 7, 149) 53%,rgb(109, 5, 178) 53%, rgb(109, 5, 178) 56%,rgb(145, 2, 208) 56%, rgb(145, 2, 208) 69%,rgb(181, 0, 237) 69%, rgb(181, 0, 237) 100%);
+    text-transform: uppercase;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+
+
+.topnav .block {
+    float: right;
+    padding: 15px;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.topnav .block:hover {
+    background-color: rgb(181, 0, 237);
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+
+.prog .title {
+    float: left;
+    padding: 15px;
+    font-size: 30px;
+    margin-left: 20px;
+}
+.prog {
+    
+    /* position:fixed; */
+    top: 0;
+    padding: 0px;
+    margin:0%;
+    height: 104px;
+    
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content:center;
+
+    color: rgb(0, 0, 0);
+    background-color: white;
+    text-transform: uppercase;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+.prog .block {
+    float: right;
+    padding: 15px;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.prog .block:hover {
+    background-color: rgb(181, 0, 237);
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+
+.prog p {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: larger;
+}
+
+.leftGroup {
+    flex: 1;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+}
+
+.rightGroup {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 60px;
+}
+
+
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 64px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+  
+.green {
+    background-color: rgba(255, 255, 255, 0); 
+    color: rgb(255, 255, 255); 
+    border: 2px solid #4CAF50;
+}
+  
+.green:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+  
+.blue {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
+  
+.blue:hover {
+    background-color: #008CBA;
+    color: white;
+}
+  
+.red {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #f44336;
+}
+  
+.red:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+.black {
+    background-color: white;
+    color: black;
+    border: 2px solid #222222;
+}
+  
+.black:hover {
+    background-color: #222222;
+    color: white;
+}
+
+
+
+
+.flex{
+    display:flex;
+    transition-duration: 0.4s;
+}
+
+
+.main{
+    align-items: center;
+    flex-direction: column;
+}
+
+#o{
+    background-image: linear-gradient(-45deg, rgb(37, 163, 10),rgb(189, 191, 54),rgb(226, 161, 40));
+    background-size: 200% 200%;
+	animation: gradient 10s ease infinite;
+    
+}
+
+#d{
+    background-image: linear-gradient(-45deg, rgb(79,156,239),rgb(139,85,235),rgb(239,97,211));
+    background-size: 200% 200%;
+	animation: gradient 10s ease infinite;
+}
+#oi{
+    background-image: linear-gradient(-45deg, rgb(37, 163, 10),rgb(138, 191, 54),rgb(239, 219, 97));
+    background-size: 200% 200%;
+	animation: gradient 10s ease infinite;
+}
+#oe{
+    background-image: linear-gradient(-45deg, rgb(249, 66, 6),rgb(250, 134, 22),rgb(251, 202, 37));
+    background-size: 200% 200%;
+	animation: gradient 10s ease infinite;
+}
+#di{
+    background-image: linear-gradient(-45deg, rgb(63,27,163),rgb(217,138,255));
+    background-size: 200% 200%;
+	animation: gradient 10s ease infinite;
+}
+#de{
+    background-image: linear-gradient(-45deg, rgb(27,50,163),rgb(138,208,255));
+    background-size: 200% 200%;
+	animation: gradient 10s ease infinite;
+}
+
+.n{
+    background-image: linear-gradient(-45deg, rgb(252,231,90),rgb(162,91,85),rgb(71, 0, 157));
+    background-size: 200% 200%;
+	animation: gradient 10s ease infinite;
+}
+.s{
+    background-image: linear-gradient(45deg, rgb(147,252,90),rgb(85,162,141),rgb(0,26,157));
+    background-size: 200% 200%;
+	animation: gradient 10s ease infinite;
+}
+.t{
+    background-image: linear-gradient(45deg, rgb(90,252,198),rgb(85,111,162),rgb(36,0,157));
+    background-size: 200% 200%;
+	animation: gradient 10s ease infinite;
+}
+.f{
+    background-image: linear-gradient(45deg, rgb(252,90,144),rgb(146,85,162),rgb(54,0,157));
+    background-size: 200% 200%;
+	animation: gradient 10s ease infinite;
+}
+
+.nf{
+    background-image: linear-gradient(-45deg, rgb(252,231,90),rgb(162,91,85),rgb(71, 0, 157),rgb(146,85,162),rgb(252,90,144));
+    background-size: 200% 200%;
+	animation: gradient 10s ease infinite;
+}
+.sf{
+    background-image: linear-gradient(45deg, rgb(147,252,90),rgb(85,162,141),rgb(0,26,157), rgb(54,0,157), rgb(146,85,162),rgb(252,90,144));
+    background-size: 200% 200%;
+	animation: gradient 10s ease infinite;
+}
+.nt{
+    background-image: linear-gradient(45deg, rgb(90,252,198),rgb(85,111,162),rgb(36,0,157),rgb(71, 0, 157),rgb(162,91,85),rgb(252,231,90));
+    background-size: 200% 200%;
+	animation: gradient 10s ease infinite;
+}
+.st{
+    background-image: linear-gradient(45deg, rgb(90,252,198),rgb(85,111,162),rgb(36,0,157),rgb(0,26,157),rgb(85,162,141),rgb(147,252,90));
+    background-size: 200% 200%;
+	animation: gradient 10s ease infinite;
+}
+.sle{
+    background-image: linear-gradient(-45deg, rgb(90, 228, 252), rgb(85, 99, 162),rgb(23, 17, 117));
+    background-size: 200% 200%;
+	animation: gradient 10s ease infinite;
+}
+.con{
+    background-image: linear-gradient(-45deg, rgb(141, 252, 90),rgb(85, 162, 139),rgb(0, 73, 157));
+    background-size: 200% 200%;
+	animation: gradient 10s ease infinite;
+}
+.bla{
+    background-image: linear-gradient(-45deg, rgb(252, 149, 90),rgb(162, 85, 85),rgb(157, 0, 39));
+    background-size: 200% 200%;
+	animation: gradient 10s ease infinite;
+}
+.pla{
+    background-image: linear-gradient(-45deg, rgb(252,231,90),rgb(162, 135, 85),rgb(157, 102, 0));
+    background-size: 200% 200%;
+	animation: gradient 10s ease infinite;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.page{
+    height: 78.3%;
+}
+
+.option{
+    font-size: x-large;
+    display: flex;
+    color:white;
+    background-color: #222222;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition-duration: 0.4s;
+}
+
+.divider{
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    width: 5%;
+    color: rgb(103, 106, 110);
+}
+
+
+input {
+    position: relative;
+    background-color: #bacde7; 
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+.parallax {
+    min-height: 500px; 
+    width: 100%;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 400% 400%;
+    align-items: center;
+    
+    animation: gradient 15s ease infinite;
+}
+
+
+
+.hero {
+
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+.hero .text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+}
+
+.hero .text h1 {
+    font-size: 70px;
+}
+
+
+#result {text-transform: uppercase;}
+
+
+#progImg {
+    width: 100px;
+}

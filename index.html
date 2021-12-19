@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="topnav flex">
+        <div class="leftGroup">
+            <div class="title">Understanding You People</div>
+        </div>
+        <div class="rightGroup">
+            <div class="block"><a href="index.html">Test</a></div>
+            <div class="block"><a href="history.html">History</a></div>
+        </div>
+    </div>
+    <div class="prog flex" id="prog" style="display: none;">
+        <p id="progLetters">xxxx</p>
+        <img id="progImg" src="">
+        <p id="progInstinct">xxxx</p>
+    </div>
+    <!-- Start -->
+    <div class="flex main" id="start">
+        <h1>Objective MBTI Typing Test</h1>
+        <br>
+        <input type="text" name="name" id="thename" placeholder="Name">
+        <button class="button blue" onclick="test.username = thename.value; showTwoElement(od, prog);">Take the Test</button>
+        <!-- <br><br>
+        <button class="button blue" onclick="addRandom()">Auto Fill</button> -->
+    </div>
+
+    <!-- Observer || Decider -->
+    <div class="flex page" id="od" style="display: none;">
+        <div class="option" id="o">
+            <h1>Observer</h1>
+            <ul>
+                <li>Information first</li>
+                <li>Stress comes from all the little things</li>
+                <li>balanced self and others needs</li>
+                <li>all about missing information</li>
+                <li>insult others/self, complement others/self</li>
+                <li>People aren't a big issue</li>
+            </ul>
+            <button class="button green" onclick="showElement(oioe)">Select</button>
+        </div>
+        <div class="flex divider">
+            <h3>or</h3>
+        </div>
+        <div class="option" id="d">
+            <h1>Decider</h1>
+            <ul>
+                <li>People or identity first</li>
+                <li>Stress comes from people or identity</li>
+                <li>balanced control and chaos</li>
+                <li>all about people(caring too much/too little)</li>
+                <li>Little things/conspiracies aren't a big issue</li>
+                <li>People are only good or bad no in-between</li>
+            </ul>
+            <button class="button green" onclick="showElement(dide)">Select</button>
+        </div>
+    </div>
+
+    <!-- IxxJ Oi || ExxP Oe -->
+    <div class="flex page" id="oioe" style="display: none;">
+        <div class="option" id="oi">
+            <h1>IxxJ (Oi)</h1>
+            <ul>
+                <li>Organize</li>
+                <li>Sameness</li>
+                <li>no new info</li>
+                <li>runs from chaos</li>
+                <li>Building</li>
+            </ul>
+            <button class="button green" onclick="showElement(nisi); addLetter(test, 'ixxj')">Select</button>
+        </div>
+        <div class="flex divider">
+            <h3>or</h3>
+        </div>
+        <div class="option" id="oe">
+            <h1>ExxP (Oe)</h1>
+            <ul>
+                <li>Gather</li>
+                <li>New things</li>
+                <li>wants new info</li>
+                <li>runs towards chaos</li>
+                <li>Updating</li>
+            </ul>
+            <button class="button green" onclick="showElement(nese); addLetter(test, 'exxp')">Select</button>
+        </div>
+    </div>
+
+    <!-- IxxP Di || ExxJ De -->
+    <div class="flex page" id="dide"style="display: none;">
+        <div class="option" id="di">
+            <h1>IxxP (Di)</h1>
+            <ul>
+                <li>Self needs first</li>
+                <li>Tries to find/maintain identity</li>
+                <li>blind to the needs of others</li>
+                <li>feels like they are against the world</li>
+                <li>"I'm not respected by the tribe,<br> so I'll just keep doing me"</li>
+            </ul>
+            <button class="button green" onclick="showElement(tifi); addLetter(test, 'ixxp')">Select</button>
+        </div>
+        <div class="flex divider">
+            <h3>or</h3>
+        </div>
+        <div class="option" id="de">
+            <h1>ExxJ (De)</h1>
+            <ul>
+                <li>Others needs first</li>
+                <li>runs around helping others</li>
+                <li>blind to their own life/needs</li>
+                <li>needy for validation</li>
+                <li>"I'm doing all this work for the tribe,<br> and I'm still not feeling respected"</li>
+            </ul>
+            <button class="button green" onclick="showElement(tefe); addLetter(test, 'exxj')">Select</button>
+        </div>
+    </div>
+
+    <!-- Ni || Si -->
+    <div class="flex page" id="nisi" style="display: none;">
+        <div class="option n">
+            <h1>Introverted Intuition (Ni)</h1>
+            <ul>
+                <li>Organizing ideas</li>
+                <li>knowing</li>
+                <li>looking to the future</li>
+                <li>looks for abstract connections first,<br> then sees provable facts</li>
+            </ul>
+            <button id="ni" class="button green" onclick="addFunction(test, 'ni'); whereNow(test, dide); ">Select</button>
+        </div>
+        <div class="flex divider">
+            <h3>or</h3>
+        </div>
+        <div class="option s">
+            <h1>Introverted Sensing (Si)</h1>
+            <ul>
+                <li>Organizing facts</li>
+                <li>preserving</li>
+                <li>looking to the past</li>
+                <li>looks for provable facts first,<br> then sees abstract connections</li>
+            </ul>
+            <button id="si" class="button green" onclick="addFunction(test, 'si'); whereNow(test, dide); ">Select</button>
+        </div>
+    </div>
+
+    <!-- Ne || Se -->
+    <div class="flex page" id="nese" style="display: none;">
+        <div class="option n">
+            <h1>Extroverted Intuition (Ne)</h1>
+            <ul>
+                <li>new ideas</li>
+                <li>creating</li>
+                <li>new possibilities</li>
+                <li>looks for abstract connections first,<br> then sees provable facts</li>
+            </ul>
+            <button id="ne" class="button green" onclick="addFunction(test, 'ne'); whereNow(test, dide); ">Select</button>
+        </div>
+        <div class="flex divider">
+            <h3>or</h3>
+        </div>
+        <div class="option s">
+            <h1>Extroverted Sensing (Se)</h1>
+            <ul>
+                <li>new facts</li>
+                <li>doing</li>
+                <li>aware of surrounding</li>
+                <li>looks for provable facts first,<br> then sees abstract connections</li>
+            </ul>
+            <button id="se" class="button green" onclick="addFunction(test, 'se'); whereNow(test, dide); ">Select</button>
+        </div>
+    </div>
+
+
+
+    <!-- Ti || Fi -->
+    <div class="flex page" id="tifi" style="display: none;">
+        <div class="option t">
+            <h1>Introverted Thinking (Ti)</h1>
+            <ul>
+                <li>self reasons</li>
+                <li>self checking</li>
+                <li>efficiency for self</li>
+                <li>understand the logic</li>
+                <li>know the "why"</li>
+            </ul>
+            <button id="ti" class="button green" onclick="addFunction(test, 'ti'); whereNow(test, oioe); ">Select</button>
+        </div>
+        <div class="flex divider">
+            <h3>or</h3>
+        </div>
+        <div class="option f">
+            <h1>Introverted Feeling (Fi)</h1>
+            <ul>
+                <li>self values</li>
+                <li>empathizing</li>
+                <li>"i have to value it"</li>
+                <li>subjective feeling</li>
+                <li>"what do i feel"</li>
+            </ul>
+            <button id="fi" class="button green" onclick="addFunction(test, 'fi'); whereNow(test, oioe); ">Select</button>
+        </div>
+    </div>
+
+    <!-- Te || Fe -->
+    <div class="flex page" id="tefe" style="display: none;">
+        <div class="option t">
+            <h1>Extroverted Thinking (Te)</h1>
+            <ul>
+                <li>others reasons</li>
+                <li>efficiency for everyone</li>
+                <li>systematizing</li>
+                <li>process logic</li>
+                <li>what objectively gets results</li>
+                <li>what works for everyone</li>
+            </ul>
+            <button id="te" class="button green" onclick="addFunction(test, 'te'); whereNow(test, oioe); ">Select</button>
+        </div>
+        <div class="flex divider">
+            <h3>or</h3>
+        </div>
+        <div class="option f">
+            <h1>Extroverted Feeling (Fe)</h1>
+            <ul>
+                <li>others values</li>
+                <li>social harmony</li>
+                <li>persuading</li>
+                <li>process emotions</li>
+                <li>spectrum of opinions</li>
+                <li>what do others want</li>
+            </ul>
+            <button id="fe" class="button green" onclick=" addFunction(test, 'fe'); whereNow(test, oioe);">Select</button>
+        </div>
+    </div>
+
+    <!-- C || B -->
+    <div class="flex page" id="cb" style="display: none;">
+        <div class="option con">
+            <h1>Consume</h1>
+            <ul>
+                <li>Learning</li>
+                <li>Taking in information</li>
+                <li>respecting info</li>
+                <li>filling in gaps of knowledge</li>
+            </ul>
+            <button id="con" class="button green" onclick="addInstinct(test, 'c'); whereNow(test, error);">Select</button>
+        </div>
+        <div class="flex divider">
+            <h3>or</h3>
+        </div>
+        <div class="option bla">
+            <h1>Blast</h1>
+            <ul>
+                <li>teaching</li>
+                <li>controlling</li>
+                <li>getting started</li>
+                <li>bragging</li>
+            </ul>
+            <button id="bla" class="button green" onclick=" addInstinct(test, 'b'); whereNow(test, error);">Select</button>
+        </div>
+    </div>
+
+    <!-- S || P -->
+    <div class="flex page" id="sp" style="display: none;">
+        <div class="option sle">
+            <h1>Sleep</h1>
+            <ul>
+                <li>preserving energy</li>
+                <li>processing</li>
+                <li>introspective</li>
+                <li>self aware</li>
+            </ul>
+            <button id="sle" class="button green" onclick="addInstinct(test, 's'); whereNow(test, error);">Select</button>
+        </div>
+        <div class="flex divider">
+            <h3>or</h3>
+        </div>
+        <div class="option pla">
+            <h1>Play</h1>
+            <ul>
+                <li>expending energy</li>
+                <li>working</li>
+                <li>doing</li>
+                <li>showing off</li>
+            </ul>
+            <button id="pla" class="button green" onclick=" addInstinct(test, 'p'); whereNow(test, error);">Select</button>
+        </div>
+    </div>
+
+    <!-- B || P -->
+    <div class="flex page" id="bp" style="display: none;">
+        <div class="option bla">
+            <h1>Blast</h1>
+            <ul>
+                <li>teaching</li>
+                <li>controlling</li>
+                <li>getting started</li>
+                <li>bragging</li>
+            </ul>
+            <button id="bla" class="button green" onclick=" addInstinct(test, 'b'); whereNow(test, error);">Select</button>
+        </div>
+        <div class="flex divider">
+            <h3>or</h3>
+        </div>
+        <div class="option pla">
+            <h1>Play</h1>
+            <ul>
+                <li>expending energy</li>
+                <li>working</li>
+                <li>doing</li>
+                <li>showing off</li>
+            </ul>
+            <button id="pla" class="button green" onclick=" addInstinct(test, 'p'); whereNow(test, error);">Select</button>
+        </div>
+    </div>
+
+    <!-- S || C -->
+    <div class="flex page" id="sc" style="display: none;">
+        <div class="option sle">
+            <h1>Sleep</h1>
+            <ul>
+                <li>preserving energy</li>
+                <li>processing</li>
+                <li>introspective</li>
+                <li>self aware</li>
+            </ul>
+            <button id="sle" class="button green" onclick="addInstinct(test, 's'); whereNow(test, error);">Select</button>
+        </div>
+        <div class="flex divider">
+            <h3>or</h3>
+        </div>
+        
+        <div class="option con">
+            <h1>Consume</h1>
+            <ul>
+                <li>Learning</li>
+                <li>Taking in information</li>
+                <li>respecting info</li>
+                <li>filling in gaps of knowledge</li>
+            </ul>
+            <button id="con" class="button green" onclick="addInstinct(test, 'c'); whereNow(test, error);">Select</button>
+        </div>
+    </div>
+
+    <!-- S || B -->
+    <div class="flex page" id="sb" style="display: none;">
+        <div class="option sle">
+            <h1>Sleep</h1>
+            <ul>
+                <li>preserving energy</li>
+                <li>processing</li>
+                <li>introspective</li>
+                <li>self aware</li>
+            </ul>
+            <button id="sle" class="button green" onclick="addInstinct(test, 's'); whereNow(test, error);">Select</button>
+        </div>
+        <div class="flex divider">
+            <h3>or</h3>
+        </div>
+        
+        <div class="option bla">
+            <h1>Blast</h1>
+            <ul>
+                <li>teaching</li>
+                <li>controlling</li>
+                <li>getting started</li>
+                <li>bragging</li>
+            </ul>
+            <button id="bla" class="button green" onclick=" addInstinct(test, 'b'); whereNow(test, error);">Select</button>
+        </div>
+    </div>
+
+    <!-- C || P -->
+    <div class="flex page" id="cp" style="display: none;">
+        <div class="option con">
+            <h1>Consume</h1>
+            <ul>
+                <li>Learning</li>
+                <li>Taking in information</li>
+                <li>respecting info</li>
+                <li>filling in gaps of knowledge</li>
+            </ul>
+            <button id="con" class="button green" onclick="addInstinct(test, 'c'); whereNow(test, error);">Select</button>
+        </div>
+        <div class="flex divider">
+            <h3>or</h3>
+        </div>
+        <div class="option pla">
+            <h1>Play</h1>
+            <ul>
+                <li>expending energy</li>
+                <li>working</li>
+                <li>doing</li>
+                <li>showing off</li>
+            </ul>
+            <button id="pla" class="button green" onclick=" addInstinct(test, 'p'); whereNow(test, error);">Select</button>
+        </div>
+    </div>
+
+
+    <!-- Finish -->
+    <div class="flex main" id="finish" style="display: none;">
+        <h1>Your Personality Type is....</h1>
+        <br>
+        <div class="parallax flex" id="parallax">
+            <div class="hero">
+                <div class="text">
+                    <h1 id="result"></h1>
+                </div>
+            </div>
+        </div>
+        <!-- <button class="button blue" onclick="writeData()">Submit</button> -->
+    </div>
+
+    <!-- Error -->
+    <div class="flex main" id="error" style="display: none;">
+        <h1>You got an error</h1>
+        <br>
+        <div class="parallax flex" id="parallax">
+            <div class="hero">
+                <div class="text">
+                    <h1 id="result"></h1>
+                    <p id="hi"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script type="module">
+        // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+    
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAmcLiOrFw1NV6tZlIedwPXSGZ1dykaSZ8",
+      authDomain: "tutorial-b4173.firebaseapp.com",
+      projectId: "tutorial-b4173",
+      storageBucket: "tutorial-b4173.appspot.com",
+      messagingSenderId: "934838365308",
+      appId: "1:934838365308:web:4d2327f30be87cca9aadf9",
+      measurementId: "G-GJV8PZRHEY"
+    };
+    
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    function writeData() {
+      firebase.database().ref("User").set({
+          username: document.getElementById("thename").value,
+          mbti: test.mbti,
+          o: test.o,
+          d: test.d,
+          instinct: test.instinct
+      })
+    }
+    document.getElementById("submit").addEventListener("click", writeData);
+    </script> -->
+    
+    <button class="button blue" id="submit">Submit</button>
+</body>
+
+<script src="script.js"></script>
+</html>
