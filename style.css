@@ -320,8 +320,8 @@ a{
 
 input {
     position: relative;
-    background-color: #bacde7; 
-    border: none;
+    background-color: #fff; 
+    border: #bacde7 2px solid;
     color: black;
     padding: 16px 32px;
     text-align: center;
